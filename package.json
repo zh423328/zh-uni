@@ -1,0 +1,22 @@
+{
+  "name": "create-zh-uni",
+  "version": "1.0.0",
+  "description": "Create a new Uni.app project",
+  "main": "index.js",
+  "bin": {
+    "create-zh-uni": "./index.js"
+  },
+  "files": [
+    "template",
+    "index.js"
+  ],
+  "keywords": ["uni-app", "template", "boilerplate"],
+  "author": "Zayn",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.0.0",
+    "prompts": "^2.4.0",
+    "chalk": "^4.1.0",
+    "validate-npm-package-name": "^4.0.0"
+  }
+}
