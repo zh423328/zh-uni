@@ -1,6 +1,6 @@
 {
   "name": "@zayn919/create-zh-uni",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create a new Uni.app project",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,11 @@
     "template",
     "index.js"
   ],
-  "keywords": ["uni-app", "template", "boilerplate"],
+  "keywords": [
+    "uni-app",
+    "template",
+    "boilerplate"
+  ],
   "author": "Zayn",
   "license": "MIT",
   "dependencies": {
