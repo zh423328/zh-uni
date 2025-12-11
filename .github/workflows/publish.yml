@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*'     # 只有推送 tag 才触发，例如 v1.0.0
 
 jobs:
   publish:
@@ -11,49 +11,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 拉取代码
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 安装 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org/'
 
-      # 调试：检查环境变量和配置
-      - name: Debug info
-        run: |
-          echo "Checking NPM_TOKEN..."
-          if [ -z "${{ secrets.NPM_TOKEN }}" ]; then
-            echo "ERROR: NPM_TOKEN is empty!"
-          else
-            echo "NPM_TOKEN is set (but hidden)"
-          fi
-          
-          echo "Current directory:"
-          pwd
-          ls -la
-          
-          echo "npm config:"
-          npm config list
-
-      # 显式设置认证
-      - name: Setup npm authentication
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-          # 验证配置
-          npm config get registry
-          npm config get //registry.npmjs.org/:_authToken
-          
-          # 尝试验证身份（会显示你的 npm 用户名）
-          npm whoami || echo "npm whoami failed, but might still publish"
-
+      # 安装依赖
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
+      # 发布到 npm
       - name: Publish to npm
         run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      # （可选）自动创建 GitHub Release
       - name: Create Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
