@@ -18,7 +18,11 @@
 ### 1. 创建项目
 
 ```bash
-npx @zayn919/create-zh-uni
+支持的命令格式：
+✅ npx @zayn/create-zh-uni - 交互式创建
+✅ npx @zayn/create-zh-uni my-app - 使用默认模板创建
+✅ npx @zayn/create-zh-uni my-app --template base-wotui - 指定wot-ui模板创建
+✅ npx @zayn/create-zh-uni my-app --template base-uniui - 使用uni-ui模板
 ```
 
 ### 2. 选择模板
