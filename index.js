@@ -65,6 +65,7 @@ async function main() {
         name: 'template',
         message: '请选择模板:',
         choices: [
+          { title: '基础模板-uViewPro', value: 'base-uViewPro' },
           { title: '基础模板-wotui', value: 'base-wotui' },
           { title: '基础模板-uniui', value: 'base-uniui' },
         ]
@@ -73,7 +74,7 @@ async function main() {
   } else {
     // 命令行模式
     response.projectName = cliArgs.projectName;
-    response.template = cliArgs.template || 'base-wotui'; // 默认模板
+    response.template = cliArgs.template || 'base-uViewPro'; // 默认模板
     
     // 验证项目名称
     const validation = validate(response.projectName);
