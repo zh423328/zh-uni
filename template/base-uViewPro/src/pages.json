@@ -1,0 +1,37 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // npm 方式
+      "^u-(.*)": "uview-pro/components/u-$1/u-$1.vue"
+      // uni_modules 方式
+      // "^u-(.*)": "@/uni_modules/uview-pro/components/u-$1/u-$1.vue"
+    }
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false,
+        "disableScroll": false
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
