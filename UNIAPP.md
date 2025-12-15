@@ -33,6 +33,7 @@
 2. **选择模板类型**:
    - `基础模板-wotui` - 使用 Wot Design Uni 组件库
    - `基础模板-uniui` - 使用 uni-ui 组件库
+   - `基础模板-uViewPro` - 使用 uViewPro 组件库
 
 ### 3. 项目初始化
 
