@@ -125,13 +125,13 @@
         </view>
 
         <!-- 提示弹窗 -->
-        <uni-popup ref="popup" type="center">
+        <u-popup v-model="popup" mode="center">
             <view class="popup-content">
                 <view class="popup-title">{{ popupTitle }}</view>
                 <view class="popup-text">{{ popupMessage }}</view>
                 <button class="popup-btn" @click="handleClose">确定</button>
             </view>
-        </uni-popup>
+        </u-popup>
     </view>
 </template>
 
@@ -174,7 +174,7 @@ const phoneForm = ref<ILoginByPhoneReq>({
 })
 const showPassword = ref(false)
 const countdown = ref(0)
-const popup = ref()
+const popup = ref<boolean>(false)
 const isLoading = ref(false)
 const popupTitle = ref('')
 const popupMessage = ref('')
@@ -310,14 +310,11 @@ const showPrivacyPolicy = () => {
 const showPopup = (title: string, message: string) => {
     popupTitle.value = title
     popupMessage.value = message
-    setTimeout(() => {
-        popup.value.open()
-        //popup.value = true
-    }, 100)
+    popup.value = true
 }
 
 const handleClose = () => {
-    popup.value.close()
+    popup.value = false;
 }
 
 onUnload(() => {
