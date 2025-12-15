@@ -1,6 +1,6 @@
 {
   "name": "@zayn919/create-zh-uni",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "创建一个符合中文开发习惯的 uni-app 项目脚手架",
   "main": "index.js",
   "bin": {
