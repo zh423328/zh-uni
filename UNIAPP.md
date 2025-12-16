@@ -11,7 +11,7 @@
 - **状态管理**: Pinia + pinia-plugin-persistedstate
 - **样式**: Sass + UnoCSS
 - **构建工具**: Vite
-- **UI组件库**: uni-ui / Wot Design Uni
+- **UI组件库**: uni-ui / Wot Design Uni / uViewPro
 
 ## 安装使用
 
