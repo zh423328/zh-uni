@@ -17,6 +17,9 @@
   ],
   "author": "Zayn",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "fs-extra": "^11.3.4",
