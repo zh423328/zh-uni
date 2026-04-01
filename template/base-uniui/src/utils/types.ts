@@ -50,3 +50,11 @@ export interface ITokenStore {
   logout(): Promise<void>
   refreshToken(): Promise<void>
 }
+
+
+export type CustomRequestOptions = UniApp.RequestOptions & {
+  query?: Record<string, any>,
+  params?: Record<string, any>
+  /** 出错时是否隐藏错误提示 */
+  hideErrorToast?: boolean
+}

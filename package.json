@@ -18,9 +18,9 @@
   "author": "Zayn",
   "license": "MIT",
   "dependencies": {
-    "fs-extra": "^11.0.0",
-    "prompts": "^2.4.0",
     "chalk": "^4.1.0",
+    "fs-extra": "^11.3.4",
+    "prompts": "^2.4.0",
     "validate-npm-package-name": "^4.0.0"
   }
 }
